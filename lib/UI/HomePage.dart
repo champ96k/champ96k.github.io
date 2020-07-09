@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:potrtfolio/Model/Method.dart';
 import 'package:potrtfolio/UI/About.dart';
 import 'package:potrtfolio/UI/FeatureProject.dart';
 import 'package:potrtfolio/UI/Work.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
+  Method method = Method();
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -70,29 +71,35 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding:
                                   const EdgeInsets.symmetric(vertical: 16.0),
-                              child: Card(
-                                elevation: 4.0,
-                                color: Color(0xff64FFDA),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.all(0.85),
-                                  height: 100,
-                                  width: 100,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff0A192F),
+                              child: GestureDetector(
+                                onTap: () {
+                                  method.launchURL(
+                                      "https://drive.google.com/file/d/1IDGOWHNQAjuZRyC8Ef0_KLhJdYArDTcI/view?usp=sharing");
+                                },
+                                child: Card(
+                                  elevation: 4.0,
+                                  color: Color(0xff64FFDA),
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(6.0),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 8.0,
+                                  child: Container(
+                                    margin: EdgeInsets.all(0.85),
+                                    height: 100,
+                                    width: 100,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff0A192F),
+                                      borderRadius: BorderRadius.circular(6.0),
                                     ),
-                                    child: Text(
-                                      "Resume",
-                                      style: TextStyle(
-                                        color: Color(0xff64FFDA),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0,
+                                      ),
+                                      child: Text(
+                                        "Resume",
+                                        style: TextStyle(
+                                          color: Color(0xff64FFDA),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -121,7 +128,9 @@ class _HomePageState extends State<HomePage> {
                             icon: Icon(Icons.person),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
-                            onPressed: () {}),
+                            onPressed: () {
+                              method.launchURL("https://github.com/champ96k");
+                            }),
                         IconButton(
                             icon: Icon(Icons.group),
                             color: Color(0xffffA8B2D1),
@@ -130,19 +139,26 @@ class _HomePageState extends State<HomePage> {
                         IconButton(
                           icon: Icon(Icons.call),
                           color: Color(0xffffA8B2D1),
-                          onPressed: () {},
+                          onPressed: () {
+                            method.launchURL(
+                                "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
+                          },
                           iconSize: 16.0,
                         ),
                         IconButton(
                             icon: Icon(Icons.phone),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
-                            onPressed: () {}),
+                            onPressed: () {
+                              method.launchURL("https://twitter.com/champ_96k");
+                            }),
                         IconButton(
                             icon: Icon(Icons.mail),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
-                            onPressed: () {}),
+                            onPressed: () {
+                               method.launchURL("https://twitter.com/champ_96k");
+                            }),
                         Padding(
                           padding: const EdgeInsets.only(top: 16.0),
                           child: Container(
@@ -276,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                             projectTitle: "WhatsaApp UI Clone",
                             tech1: "Flutter",
                             tech2: "Dart",
-                            tech3 : "Flutter UI",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -351,7 +367,7 @@ class _HomePageState extends State<HomePage> {
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                             projectTitle: "Weather Application",
-                           tech1: "Dart",
+                            tech1: "Dart",
                             tech2: "Flutter",
                             tech3: "Firebase",
                           ),
@@ -389,7 +405,7 @@ class _HomePageState extends State<HomePage> {
 
                           //other Projects
                           Container(
-                            height: size.height * 0.77,
+                            height: size.height * 0.86,
                             width: size.width - 100,
                             //color: Colors.deepOrangeAccent,
                             child: Column(
@@ -412,19 +428,52 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(
+                                  height: size.height * 0.04,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    CustomText(
+                                      text: "Payment Getway",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Chat App",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Spotify Clone",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "TODO App",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
                           ),
 
-                          SizedBox(
-                            height: size.height * 0.04,
-                          ),
-
                           //other Projects
                           Container(
-                            height: size.height * 0.77,
+                            height: size.height * 0.86,
                             width: size.width - 100,
-                            //color: Colors.deepOrangeAccent,
+                            // color: Colors.indigo,
                             child: Column(
                               children: [
                                 Row(
@@ -445,17 +494,50 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(
+                                  height: size.height * 0.04,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    CustomText(
+                                      text: "Spannish Audio",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Drumpad",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Currency Converter",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Calculator",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
                           ),
 
-                          SizedBox(
-                            height: size.height * 0.04,
-                          ),
-
                           //other Projects
                           Container(
-                            height: size.height * 0.77,
+                            height: size.height * 0.86,
                             width: size.width - 100,
                             //color: Colors.deepOrangeAccent,
                             child: Column(
@@ -478,12 +560,45 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(
+                                  height: size.height * 0.04,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    CustomText(
+                                      text: "Prime Videos UI",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Tic Tac Toe Game",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Currency Converter UI",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                    CustomText(
+                                      text: "Love Calculator",
+                                      textsize: 16.0,
+                                      color: Colors.white.withOpacity(0.4),
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: 1.75,
+                                    ),
+                                  ],
+                                ),
                               ],
                             ),
-                          ),
-    
-                          SizedBox(
-                            height: size.height * 0.06,
                           ),
 
                           FeatureProject(
@@ -513,7 +628,7 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                             projectTitle: "Sign up and Sign in",
+                            projectTitle: "Sign up and Sign in",
                             tech1: "Dart",
                             tech2: "Flutter",
                             tech3: "Flutter UI",
@@ -656,7 +771,7 @@ class _HomePageState extends State<HomePage> {
                             width: MediaQuery.of(context).size.width - 100,
                             //color: Colors.white,
                             child: Text(
-                              "Designed & Built by Tushar Nikam",
+                              "Designed & Built by Tushar Nikam 💙 Flutter",
                               style: TextStyle(
                                 color: Colors.white.withOpacity(0.4),
                                 letterSpacing: 1.75,
