@@ -1,15 +1,19 @@
-# potrtfolio
 
-A new Flutter project.
+## Dev Portfolio
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Software Developer Portfolio Template that helps you showcase your work and skills as a software developer. A lightweight, customizable single-page personal portfolio website template built using Dart, Flutter web.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+This repo contains an easy-to-customize personal dev portfolio template that was created with Dart and Flutter. It is lightweight and fully responsive. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and widget fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.
+
+
+To view a live demo,[Click Here]().
+
+
+
+
+##### Design credit : [Brittany Chiang](https://www.linkedin.com/in/bchiang7/).
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
