@@ -15,7 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -273,32 +272,33 @@ class _HomePageState extends State<HomePage> {
                             imagePath: "images/pic9.jpg",
                             ontab: () {},
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
                             projectTitle: "WhatsaApp UI Clone",
                             tech1: "Flutter",
                             tech2: "Dart",
+                            tech3 : "Flutter UI",
                           ),
 
                           FeatureProject(
                             imagePath: "images/pic2.jpg",
                             ontab: () {},
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                                "A blog application using Flutter and firebase, In this project implement Firebase CURD operation, User can add post as well see all the post.",
+                            projectTitle: "Blog Application",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "Firebase",
                           ),
 
                           FeatureProject(
                             imagePath: "images/pic3.png",
                             ontab: () {},
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                                "A Wallpaper application Using Pixel API, to show more than 5k+ images. User can Search any images, as well as Download and directly set Image as Wallpaper.",
+                            projectTitle: "Wallpaper Hub",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "API",
                           ),
 
                           FeatureProject(
@@ -306,10 +306,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Covid19 Tracker",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "API",
                           ),
 
                           FeatureProject(
@@ -317,10 +317,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Gender Predictor",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "API",
                           ),
 
                           FeatureProject(
@@ -328,10 +328,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "News Hour",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "API",
                           ),
 
                           FeatureProject(
@@ -339,10 +339,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Wallpaper App",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "Firebase",
                           ),
 
                           FeatureProject(
@@ -350,10 +350,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Weather Application",
+                           tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "Firebase",
                           ),
 
                           FeatureProject(
@@ -361,10 +361,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Flutter Onboarding \nScreen Package",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "Dart Package",
                           ),
 
                           FeatureProject(
@@ -372,10 +372,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
-                            tech1: "GitHub API",
-                            tech2: "GitHub API",
-                            tech3: "GitHub",
+                            projectTitle: "Neumorphic Design",
+                            tech1: "Dart",
+                            tech2: "Flutter",
+                            tech3: "Flutter UI",
                           ),
 
                           MainTiitle(
@@ -491,7 +491,7 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "SolMusic",
                             tech1: "Dart",
                             tech2: "Flutter",
                             tech3: "Web",
@@ -502,10 +502,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Sign Up and Sign In",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -513,10 +513,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                             projectTitle: "Sign up and Sign in",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -524,10 +524,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Online Flowers Shop",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -535,10 +535,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Food delivery App",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -546,10 +546,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Plant Nursery App",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -557,10 +557,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Foody",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           FeatureProject(
@@ -568,10 +568,10 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "OctoProfile",
+                            projectTitle: "Online Food order",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Web",
+                            tech3: "Flutter UI",
                           ),
 
                           //Get In Touch
