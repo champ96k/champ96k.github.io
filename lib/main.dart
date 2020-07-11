@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:potrtfolio/UI/HomePage.dart';
+import 'package:potrtfolio/UI/Home.dart';
 void main() {
   runApp(MyApp());
 }
@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
             title: 'Tushar Nikam',
             debugShowCheckedModeBanner: false,
-        home: HomePage()
+        home: Home()
       );
   }
 }
+
+

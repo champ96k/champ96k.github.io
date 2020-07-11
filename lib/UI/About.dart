@@ -34,9 +34,9 @@ class About extends StatelessWidget {
         children: [
           //About me
           Container(
-            height: size.height * 0.75,
+            height: size.height*0.9,
             width: size.width / 2 - 100,
-            //color: Colors.purple,
+           //color: Colors.purple,
             child: Column(
               children: [
                 //About me title
@@ -59,11 +59,11 @@ class About extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(
-                      width: 26.0,
+                      width: MediaQuery.of(context).size.width*0.01,
                     ),
                     Container(
                       width: size.width / 4,
-                      height: 0.10,
+                      height: 1.10,
                       color: Color(0xff303C55),
                     ),
                   ],
@@ -104,13 +104,14 @@ class About extends StatelessWidget {
                 ),
 
                 Container(
-                  height: 100,
+                  height: size.height*0.11,
                   width: size.width,
+               //   color: Colors.redAccent,
                   child: Row(
                     children: [
                       Container(
-                        width: size.width * 0.15,
-                        height: 100,
+                        width: size.width * 0.20,
+                         height: size.height*0.11,
                         child: Column(
                           children: [
                             technology(context, "Dart"),
@@ -122,7 +123,7 @@ class About extends StatelessWidget {
                       ),
                       Container(
                         width: size.width * 0.15,
-                        height: 100,
+                         height: size.height*0.11,
                         child: Column(
                           children: [
                             technology(context, "C/C++, Java."),

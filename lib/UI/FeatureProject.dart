@@ -82,8 +82,9 @@ class FeatureProject extends StatelessWidget {
                     height: size.height * 0.10,
                     width: size.width * 0.25,
                     //color: Colors.indigo,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                    child: Wrap(
+                     // mainAxisAlignment: MainAxisAlignment.end,
+                     alignment: WrapAlignment.end,
                       children: [
                         CustomText(
                           text: projectTitle,
@@ -148,16 +149,14 @@ class FeatureProject extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        GestureDetector(
-                          onTap: ontab,
-                          child: IconButton(
+                        IconButton(
                             icon: Icon(
                               Icons.account_circle,
                               color: Colors.white.withOpacity(0.4),
                             ),
-                            onPressed: () {},
+                            onPressed: ontab,
                           ),
-                        ),
+                        
                       ],
                     ),
                   ),

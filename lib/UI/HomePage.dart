@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:potrtfolio/Model/Method.dart';
 import 'package:potrtfolio/UI/About.dart';
@@ -43,6 +41,7 @@ class _HomePageState extends State<HomePage> {
                       Spacer(),
                       Expanded(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             AppBarTitle(
                               text: "About",
@@ -157,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                               method.launchURL("https://twitter.com/champ_96k");
+                              method.launchURL("https://twitter.com/champ_96k");
                             }),
                         Padding(
                           padding: const EdgeInsets.only(top: 16.0),
@@ -240,7 +239,9 @@ class _HomePageState extends State<HomePage> {
                                 color: Color(0xff0A192F),
                               ),
                               child: MaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  method.launchEmail();
+                                },
                                 hoverColor: Colors.green,
                                 child: Text(
                                   "Get In Touch",
@@ -286,7 +287,9 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic9.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL("https://twitter.com/champ_96k");
+                            },
                             projectDesc:
                                 "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
                             projectTitle: "WhatsaApp UI Clone",
@@ -377,7 +380,7 @@ class _HomePageState extends State<HomePage> {
                             ontab: () {},
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                            projectTitle: "Flutter Onboarding \nScreen Package",
+                            projectTitle: "Flutter Onboarding Screen Package",
                             tech1: "Dart",
                             tech2: "Flutter",
                             tech3: "Dart Package",
@@ -691,9 +694,9 @@ class _HomePageState extends State<HomePage> {
 
                           //Get In Touch
                           Container(
-                            height: MediaQuery.of(context).size.height,
+                            height: size.height * 0.68,
                             width: MediaQuery.of(context).size.width - 100,
-                            //  color: Colors.orange,
+                            // color: Colors.orange,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
