@@ -7,6 +7,7 @@ import 'package:potrtfolio/Widget/AppBarTitle.dart';
 import 'package:potrtfolio/Widget/CustomText.dart';
 import 'package:potrtfolio/Widget/MainTiitle.dart';
 import 'package:potrtfolio/Widget/OSImages.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -124,19 +125,21 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            icon: Icon(Icons.person),
+                            icon: FaIcon(FontAwesomeIcons.github),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
                               method.launchURL("https://github.com/champ96k");
                             }),
                         IconButton(
-                            icon: Icon(Icons.group),
+                            icon: FaIcon(FontAwesomeIcons.twitter),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
-                            onPressed: () {}),
+                            onPressed: () {
+                              method.launchURL("https://twitter.com/champ_96k");
+                            }),
                         IconButton(
-                          icon: Icon(Icons.call),
+                          icon: FaIcon(FontAwesomeIcons.linkedin),
                           color: Color(0xffffA8B2D1),
                           onPressed: () {
                             method.launchURL(
@@ -145,18 +148,18 @@ class _HomePageState extends State<HomePage> {
                           iconSize: 16.0,
                         ),
                         IconButton(
-                            icon: Icon(Icons.phone),
+                            icon: Icon(Icons.call),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://twitter.com/champ_96k");
+                              method.launchCaller();
                             }),
                         IconButton(
                             icon: Icon(Icons.mail),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://twitter.com/champ_96k");
+                              method.launchEmail();
                             }),
                         Padding(
                           padding: const EdgeInsets.only(top: 16.0),
@@ -288,9 +291,9 @@ class _HomePageState extends State<HomePage> {
                           FeatureProject(
                             imagePath: "images/pic9.jpg",
                             ontab: () {
-                              method.launchURL("https://twitter.com/champ_96k");
+                              method.launchURL(
+                                  "https://github.com/champ96k/WhatsApp--UI-Clone");
                             },
-                            //hh
                             projectDesc:
                                 "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
                             projectTitle: "WhatsaApp UI Clone",
@@ -301,7 +304,10 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic2.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Flutter-Blog-App-using-Firebase");
+                            },
                             projectDesc:
                                 "A blog application using Flutter and firebase, In this project implement Firebase CURD operation, User can add post as well see all the post.",
                             projectTitle: "Blog Application",
@@ -312,7 +318,10 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic3.png",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Wallpaper-Hub-using-Flutter");
+                            },
                             projectDesc:
                                 "A Wallpaper application Using Pixel API, to show more than 5k+ images. User can Search any images, as well as Download and directly set Image as Wallpaper.",
                             projectTitle: "Wallpaper Hub",
@@ -323,9 +332,12 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic4.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/coronavirus-tracker-app");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "A Flutter app to track Coronavirus outbreak, Current statistics of global total confirmed, deaths, recovered cases, Health news, coronavirus safety information and many more.",
                             projectTitle: "Covid19 Tracker",
                             tech1: "Dart",
                             tech2: "Flutter",
@@ -334,9 +346,12 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic5.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Gender-Predictor-Flutter-App");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "In this app you can predict the gender with the help of name and probability of that name.",
                             projectTitle: "Gender Predictor",
                             tech1: "Dart",
                             tech2: "Flutter",
@@ -345,9 +360,12 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic6.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/News-Hours-Apps-Using-Rest-API");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "complete news Application using rest API API link- https://newsapi.org, you can get all news.",
                             projectTitle: "News Hour",
                             tech1: "Dart",
                             tech2: "Flutter",
@@ -356,7 +374,10 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic7.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Flutter-wallpaper-App-using-Firebase");
+                            },
                             projectDesc:
                                 "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                             projectTitle: "Wallpaper App",
@@ -367,20 +388,26 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic8.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Flutter-Weather-Application");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "Weather app. This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets. Widgets for Android: The weather radar widget free and clock widget weather with beautiful style.",
                             projectTitle: "Weather Application",
                             tech1: "Dart",
                             tech2: "Flutter",
-                            tech3: "Firebase",
+                            tech3: "API",
                           ),
 
                           FeatureProject(
                             imagePath: "images/pic10.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://pub.dev/packages/flutter_onboarding_screen");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "A flutter package which help developer in creating a onboarding screens of their app.",
                             projectTitle: "Flutter Onboarding Screen Package",
                             tech1: "Dart",
                             tech2: "Flutter",
@@ -389,9 +416,12 @@ class _HomePageState extends State<HomePage> {
 
                           FeatureProject(
                             imagePath: "images/pic11.jpg",
-                            ontab: () {},
+                            ontab: () {
+                              method.launchURL(
+                                  "https://github.com/champ96k/Flutter-Neumorphic-Calculator-UI");
+                            },
                             projectDesc:
-                                "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                "To explore the flutter Neumorphic design",
                             projectTitle: "Neumorphic Design",
                             tech1: "Dart",
                             tech2: "Flutter",

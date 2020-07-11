@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:potrtfolio/Widget/CustomText.dart';
 
 class FeatureProject extends StatelessWidget {
@@ -23,7 +24,7 @@ class FeatureProject extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: size.height/0.999,
+      height: size.height / 0.999,
       width: size.width - 100,
       //color: Colors.tealAccent,
       child: Column(
@@ -83,8 +84,8 @@ class FeatureProject extends StatelessWidget {
                     width: size.width * 0.25,
                     //color: Colors.indigo,
                     child: Wrap(
-                     // mainAxisAlignment: MainAxisAlignment.end,
-                     alignment: WrapAlignment.end,
+                      // mainAxisAlignment: MainAxisAlignment.end,
+                      alignment: WrapAlignment.end,
                       children: [
                         CustomText(
                           text: projectTitle,
@@ -150,13 +151,10 @@ class FeatureProject extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            icon: Icon(
-                              Icons.account_circle,
-                              color: Colors.white.withOpacity(0.4),
-                            ),
-                            onPressed: ontab,
-                          ),
-                        
+                          icon: FaIcon(FontAwesomeIcons.github),
+                          color: Colors.white.withOpacity(0.3),
+                          onPressed: ontab,
+                        ),
                       ],
                     ),
                   ),
