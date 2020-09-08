@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class AppBarTitle extends StatelessWidget {
   
   final String text;
-  final Function ontab;
+  //final Function ontab;
 
-  AppBarTitle({@required this.text, @required this.ontab});
+  AppBarTitle({@required this.text, /*@required this.ontab*/});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ontab,
+      //onTap: ontab,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 12.0),
         child: Text(
           text,
           textAlign: TextAlign.center,
