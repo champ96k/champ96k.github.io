@@ -81,7 +81,6 @@ class About extends StatelessWidget {
                           "Hello! I'm Tushar, a Freelancer based in Nashik, IN.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
-                      fontWeight: FontWeight.w500,
                       letterSpacing: 0.75,
                     ),
                     CustomText(
@@ -89,29 +88,27 @@ class About extends StatelessWidget {
                           "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
-                       fontWeight: FontWeight.w500,
-                       letterSpacing: 0.75,
+                       letterSpacing: 0.75, 
                     ),
                     CustomText(
                       text:
                           "Here are a few technologies I've been working with recently:\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
-                       fontWeight: FontWeight.w500,
+                      // fontWeight: FontWeight.w500,
                        letterSpacing: 0.75,
                     ),
                   ],
                 ),
 
-                Container(
-                  height: size.height*0.11,
+                Container( 
+                  height: size.height*0.15, 
                   width: size.width,
-               //   color: Colors.redAccent,
                   child: Row(
                     children: [
                       Container(
                         width: size.width * 0.20,
-                         height: size.height*0.11,
+                         height: size.height*0.15, 
                         child: Column(
                           children: [
                             technology(context, "Dart"),
@@ -123,7 +120,7 @@ class About extends StatelessWidget {
                       ),
                       Container(
                         width: size.width * 0.15,
-                         height: size.height*0.11,
+                         height: size.height*0.15, 
                         child: Column(
                           children: [
                             technology(context, "C/C++, Java."),

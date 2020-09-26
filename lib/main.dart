@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
             title: 'Tushar Nikam',
             debugShowCheckedModeBanner: false,
-        home: Home()
+        home: Home(),
       );
   }
 }
 
-
+  
