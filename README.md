@@ -16,7 +16,7 @@ Software Developer Portfolio Template that helps you showcase your work and skil
    [x] Windows
    [x] linux
    [ ] MacOS (probably)
-   [x] IOs
+   [X] IOs
    
    
 ##  Wanna Contribute? 🚀
