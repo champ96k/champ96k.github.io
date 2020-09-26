@@ -12,11 +12,11 @@ Software Developer Portfolio Template that helps you showcase your work and skil
 
 
 ##  Platforms
-   - Andoid
-   - Windows
-   - linux
-   - MacOS (probably)
-   - IOs
+   [x] Andoid
+   [x] Windows
+   [x] linux
+   [ ] MacOS (probably)
+   [x] IOs
    
    
 ##  Wanna Contribute? 🚀
