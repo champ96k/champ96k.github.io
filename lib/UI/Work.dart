@@ -7,11 +7,11 @@ class Work extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: MediaQuery.of(context).size.height * 1.30,
+      height: MediaQuery.of(context).size.height * 1.45,   
       width: MediaQuery.of(context).size.width - 100,
       //color: Colors.tealAccent,
-      child: Expanded(
-        child: Column(
+      child:  Column( 
+          verticalDirection: VerticalDirection.down,
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -211,8 +211,9 @@ class Work extends StatelessWidget {
               ),
             )
           ],
-        ),
+        
       ),
     );
   }
 }
+ 

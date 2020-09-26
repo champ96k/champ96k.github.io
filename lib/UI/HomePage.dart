@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'Contact',
+                                    text: 'About',   
                                   ),
                                 ),
                               ],
