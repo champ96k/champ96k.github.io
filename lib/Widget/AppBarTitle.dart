@@ -9,9 +9,8 @@ class AppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      //onTap: ontab,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 12.0),
+        padding: const EdgeInsets.symmetric(vertical: 14.0,), 
         child: Text(
           text,
           textAlign: TextAlign.center,

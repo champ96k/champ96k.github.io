@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:potrtfolio/Model/Method.dart';
 import 'package:potrtfolio/UI/About.dart';
 import 'package:potrtfolio/UI/FeatureProject.dart';
@@ -93,60 +94,64 @@ class _HomePageState extends State<HomePage> {
                           onPressed: () {}),
                       Spacer(),
                       Expanded(
-                        child: DefaultTabController(
-                          length: 4,
-                          child: TabBar(
-                            indicatorColor: Colors.transparent,
-                            onTap: (index) async {
-                              _scrollToIndex(index);
-                            },
-                            tabs: [
-                              Tab(
-                                child: AppBarTitle(
-                                  text: 'About',
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: DefaultTabController(
+                            length: 4,
+                            child: TabBar(
+                              indicatorColor: Colors.transparent,
+                              onTap: (index) async {
+                                _scrollToIndex(index);
+                              },
+                              tabs: [
+                                Tab(
+                                  child: AppBarTitle(
+                                    text: 'About',
+                                  ),
                                 ),
-                              ),
-                              Tab(
-                                child: AppBarTitle(
-                                  text: 'Experience',
+                                Tab(
+                                  child: AppBarTitle(
+                                    text: 'Experience',
+                                  ),
                                 ),
-                              ),
-                              Tab(
-                                child: AppBarTitle(
-                                  text: 'Work',
+                                Tab(
+                                  child: AppBarTitle(
+                                    text: 'Work',
+                                  ),
                                 ),
-                              ),
-                              Tab(
-                                child: AppBarTitle(
-                                  text: 'Contact',
+                                Tab(
+                                  child: AppBarTitle(
+                                    text: 'About',   
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            method.launchURL(
-                                "https://drive.google.com/file/d/1IDGOWHNQAjuZRyC8Ef0_KLhJdYArDTcI/view?usp=sharing");
-                          },
-                          child: Card(
-                            elevation: 4.0,
-                            color: Color(0xff64FFDA),
-                            shape: RoundedRectangleBorder(
+                        child: Card(
+                          elevation: 4.0,
+                          color: Color(0xff64FFDA),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          child: Container(
+                            margin: EdgeInsets.all(0.85),
+                            height: 100,
+                            width: 100,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: Color(0xff0A192F),
                               borderRadius: BorderRadius.circular(6.0),
                             ),
-                            child: Container(
-                              margin: EdgeInsets.all(0.85),
-                              height: 100,
-                              width: 100,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: Color(0xff0A192F),
-                                borderRadius: BorderRadius.circular(6.0),
-                              ),
+                            child: FlatButton(
+                              hoverColor: Color(0xFF3E0449),
+                              onPressed: () { 
+                                method.launchURL(
+                                    "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
+                              },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 8.0,
@@ -183,7 +188,8 @@ class _HomePageState extends State<HomePage> {
                             iconSize: 16.0,
                             onPressed: () {
                               method.launchURL("https://github.com/champ96k");
-                            }),
+                            }
+                          ),
                         IconButton(
                             icon: FaIcon(FontAwesomeIcons.twitter),
                             color: Color(0xffffA8B2D1),
@@ -343,7 +349,6 @@ class _HomePageState extends State<HomePage> {
                                 height: 6.0,
                               ),
 
-
                               //Some Things I've Built Main Project
 
                               _wrapScrollTag(
@@ -448,7 +453,7 @@ class _HomePageState extends State<HomePage> {
                                               "https://github.com/champ96k/Flutter-wallpaper-App-using-Firebase");
                                         },
                                         projectDesc:
-                                            "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                            "Flutter Wallpaper application using firebase as a backend with a cool animation, it show the all images that are store in firebase firestore.",
                                         projectTitle: "Wallpaper App",
                                         tech1: "Dart",
                                         tech2: "Flutter",
@@ -719,7 +724,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic102.gif",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flutter-Web-SolMusic-Landing-Page");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "SolMusic",
@@ -730,7 +738,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic104.png",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flutter-UI-Kit");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Sign Up and Sign In",
@@ -741,7 +752,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic105.png",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flutter-UI-Kit");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Sign up and Sign in",
@@ -752,7 +766,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic106.png",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flowers-Shop-Mobile-App-Store");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Online Flowers Shop",
@@ -763,7 +780,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic107.jfif",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Food-Delivery-App-UI");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Food delivery App",
@@ -774,7 +794,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic108.jfif",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flutter-Plant-Shop-UI-Design");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Plant Nursery App",
@@ -785,7 +808,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic109.jfif",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Foody-App-UI-Design");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Foody",
@@ -796,7 +822,10 @@ class _HomePageState extends State<HomePage> {
 
                                       FeatureProject(
                                         imagePath: "images/pic110.jfif",
-                                        ontab: () {},
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Flutter-Online-Food-Order-App-UI");
+                                        },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                         projectTitle: "Online Food order",
@@ -804,8 +833,40 @@ class _HomePageState extends State<HomePage> {
                                         tech2: "Flutter",
                                         tech3: "Flutter UI",
                                       ),
+
+                                      FeatureProject(
+                                        imagePath: "images/pic501.png",
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Ganpati-Bappa-");
+                                        },
+                                        projectDesc:
+                                            "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                        projectTitle: "Ganpati Bappa",
+                                        tech1: "Dart",
+                                        tech2: "Flutter",
+                                        tech3: "Flutter Animation",
+                                      ),
+
+                                      FeatureProject(
+                                        imagePath: "images/pic506.png",
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/champ96k/Netflix-Web-Clone-Using-Flutter");
+                                        },
+                                        projectDesc:
+                                            "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                        projectTitle: "Flutter Netflix Web",
+                                        tech1: "Dart",
+                                        tech2: "Flutter Wen",
+                                        tech3: "Flutter UI",
+                                      ),
                                     ],
                                   )),
+
+                              SizedBox(
+                                height: 6.0,
+                              ),
 
                               //Get In Touch
                               _wrapScrollTag(

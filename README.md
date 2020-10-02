@@ -11,6 +11,22 @@ Software Developer Portfolio Template that helps you showcase your work and skil
 
 
 
+##  Platforms
+
+-  [X] Andoid
+-  [X] Windows
+-  [X] linux
+-  [ ] MacOS (probably)
+-  [X] IOs
+   
+   
+##  Wanna Contribute? 🚀
+  You can contribute by doing one of the following:
+  - Starring the repository ⭐
+  - Forking the repository 🍴
+  - Creating an Issue ❌
+  - Creating a Pull Request ✔
+
 
 ## Web Set up
   Run the following commands to use the latest version of the Flutter SDK from the beta channel and enable web support:
@@ -63,6 +79,7 @@ Run the following command to generate a release build:
 
 
 ##### Design credit : [Brittany Chiang](https://www.linkedin.com/in/bchiang7/).
+
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
