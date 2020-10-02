@@ -34,9 +34,9 @@ class About extends StatelessWidget {
         children: [
           //About me
           Container(
-            height: size.height*0.9,
+            height: size.height * 0.9,
             width: size.width / 2 - 100,
-           //color: Colors.purple,
+            //color: Colors.purple,
             child: Column(
               children: [
                 //About me title
@@ -59,7 +59,7 @@ class About extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width*0.01,
+                      width: MediaQuery.of(context).size.width * 0.01,
                     ),
                     Container(
                       width: size.width / 4,
@@ -88,7 +88,7 @@ class About extends StatelessWidget {
                           "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
-                       letterSpacing: 0.75, 
+                      letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
@@ -96,19 +96,19 @@ class About extends StatelessWidget {
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       // fontWeight: FontWeight.w500,
-                       letterSpacing: 0.75,
+                      letterSpacing: 0.75,
                     ),
                   ],
                 ),
 
-                Container( 
-                  height: size.height*0.15, 
+                Container(
+                  height: size.height * 0.15,
                   width: size.width,
                   child: Row(
                     children: [
                       Container(
                         width: size.width * 0.20,
-                         height: size.height*0.15, 
+                        height: size.height * 0.15,
                         child: Column(
                           children: [
                             technology(context, "Dart"),
@@ -120,7 +120,7 @@ class About extends StatelessWidget {
                       ),
                       Container(
                         width: size.width * 0.15,
-                         height: size.height*0.15, 
+                        height: size.height * 0.15,
                         child: Column(
                           children: [
                             technology(context, "C/C++, Java."),
@@ -158,23 +158,74 @@ class About extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    height: size.height / 2,
-                    width: size.width / 5,
-                    color: Colors.black54,
-                    child: Image(
-                      fit: BoxFit.cover,
-                      image: AssetImage("images/pic1.jpeg"),
-                    ),
-                  ),
-                  Container(
-                    height: size.height / 2,
-                    width: size.width / 5,
-                    color: Color(0xff61F9D5).withOpacity(0.5),
-                  ),
+                  CustomImageAnimation()
                 ],
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomImageAnimation extends StatefulWidget {
+  CustomImageAnimation({Key key}) : super(key: key);
+
+  @override
+  _CustomImageAnimationState createState() => _CustomImageAnimationState();
+}
+
+class _CustomImageAnimationState extends State<CustomImageAnimation> {
+  Color customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+  int _enterCounter = 0;
+  int _exitCounter = 0;
+  double x = 0.0;
+  double y = 0.0;
+
+  void _incrementEnter(PointerEvent details) {
+    setState(() {
+      _enterCounter++;
+    });
+  }
+
+  void _incrementExit(PointerEvent details) {
+    setState(() {
+      customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+      _exitCounter++;
+    });
+  }
+
+  void _updateLocation(PointerEvent details) {
+    setState(() {
+      customImageColor = Colors.transparent;
+      x = details.position.dx;
+      y = details.position.dy;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return MouseRegion(
+      onEnter: _incrementEnter,
+      onHover: _updateLocation,
+      onExit: _incrementExit,
+      child: Stack(
+        children: [
+          Container(
+            height: size.height / 2,
+            width: size.width / 5,
+            color: Colors.black54,
+            child: Image(
+              fit: BoxFit.cover,
+              image: AssetImage("images/pic1.jpeg"),
+            ),
+          ),
+          Container(
+            height: size.height / 2,
+            width: size.width / 5,
+            color: customImageColor,
           ),
         ],
       ),

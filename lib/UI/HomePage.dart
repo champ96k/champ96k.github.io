@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:potrtfolio/Model/Method.dart';
 import 'package:potrtfolio/UI/About.dart';
 import 'package:potrtfolio/UI/FeatureProject.dart';
@@ -8,7 +9,6 @@ import 'package:potrtfolio/Widget/AppBarTitle.dart';
 import 'package:potrtfolio/Widget/CustomText.dart';
 import 'package:potrtfolio/Widget/MainTiitle.dart';
 import 'package:potrtfolio/Widget/OSImages.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HomePage extends StatefulWidget {
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'About',   
+                                    text: 'About',
                                   ),
                                 ),
                               ],
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: FlatButton(
                               hoverColor: Color(0xFF3E0449),
-                              onPressed: () { 
+                              onPressed: () {
                                 method.launchURL(
                                     "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
                               },
@@ -188,8 +188,7 @@ class _HomePageState extends State<HomePage> {
                             iconSize: 16.0,
                             onPressed: () {
                               method.launchURL("https://github.com/champ96k");
-                            }
-                          ),
+                            }),
                         IconButton(
                             icon: FaIcon(FontAwesomeIcons.twitter),
                             color: Color(0xffffA8B2D1),
@@ -918,32 +917,38 @@ class _HomePageState extends State<HomePage> {
                                           SizedBox(
                                             height: 32.0,
                                           ),
-                                          Card(
-                                            elevation: 4.0,
-                                            color: Color(0xff64FFDA),
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(6.0),
-                                            ),
-                                            child: Container(
-                                              margin: EdgeInsets.all(0.85),
-                                              height: size.height * 0.09,
-                                              width: size.width * 0.10,
-                                              alignment: Alignment.center,
-                                              decoration: BoxDecoration(
-                                                color: Color(0xff0A192F),
+                                          InkWell(
+                                            onTap: () {
+                                              method.launchEmail();
+                                            },
+                                            child: Card(
+                                              elevation: 4.0,
+                                              color: Color(0xff64FFDA),
+                                              shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(6.0),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                  horizontal: 8.0,
+                                              child: Container(
+                                                margin: EdgeInsets.all(0.85),
+                                                height: size.height * 0.09,
+                                                width: size.width * 0.10,
+                                                alignment: Alignment.center,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xff0A192F),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          6.0),
                                                 ),
-                                                child: Text(
-                                                  "Say Hello",
-                                                  style: TextStyle(
-                                                    color: Color(0xff64FFDA),
+                                                child: Padding(
+                                                  padding: const EdgeInsets
+                                                      .symmetric(
+                                                    horizontal: 8.0,
+                                                  ),
+                                                  child: Text(
+                                                    "Say Hello",
+                                                    style: TextStyle(
+                                                      color: Color(0xff64FFDA),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
