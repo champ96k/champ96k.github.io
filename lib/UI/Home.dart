@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= 1100) {
+        if (constraints.maxWidth >= 1000) {
           return HomePage();
         } else {
           return MobileHome();

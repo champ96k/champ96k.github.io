@@ -71,16 +71,19 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Color(0xff0A192F),
-        body: Container(
+        body: SingleChildScrollView(
+          physics: ScrollPhysics(),
+          primary: true,
+          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               //Mavigation Bar
               Container(
-                height: 82,
-                width: MediaQuery.of(context).size.width,
+                height: size.height * 0.14,
+                width: size.width,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
@@ -116,12 +119,12 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'Work',
+                                    text: 'Project',
                                   ),
                                 ),
                                 Tab(
                                   child: AppBarTitle(
-                                    text: 'About',
+                                    text: 'Contact Us',
                                   ),
                                 ),
                               ],
@@ -139,8 +142,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: Container(
                             margin: EdgeInsets.all(0.85),
-                            height: 100,
-                            width: 100,
+                            height: size.height * 0.07,
+                            width: size.height * 0.20,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                               color: Color(0xff0A192F),
@@ -178,7 +181,6 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     width: size.width * 0.09,
                     height: size.height - 82,
-                    // color: Colors.pinkAccent,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -222,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                         Padding(
                           padding: const EdgeInsets.only(top: 16.0),
                           child: Container(
-                            height: 100,
+                            height: size.height * 0.20,
                             width: 2,
                             color: Colors.grey.withOpacity(0.4),
                           ),
@@ -244,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   SizedBox(
-                                    height: 92.0,
+                                    height: size.height * .06,
                                   ),
                                   CustomText(
                                     text: "Hi, my name is",
@@ -272,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                                     fontWeight: FontWeight.w700,
                                   ),
                                   SizedBox(
-                                    height: 16.0,
+                                    height: size.height * .04,
                                   ),
                                   Wrap(
                                     children: [
@@ -288,68 +290,67 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                   SizedBox(
-                                    height: 92.0,
+                                    height: size.height * .12,
                                   ),
-                                  Card(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(4.0),
-                                    ),
-                                    color: Color(0xff64FFDA),
+
+                                  //get in tuch text
+                                  InkWell(
+                                    onTap: () {
+                                      method.launchEmail();
+                                    },
+                                    hoverColor:
+                                        Color(0xff64FFDA).withOpacity(0.2),
+                                    borderRadius: BorderRadius.circular(4.0),
                                     child: Container(
                                       alignment: Alignment.center,
-                                      margin: EdgeInsets.all(0.75),
-                                      height: 56.0,
-                                      width: 160.0,
+                                      height: size.height * 0.09,
+                                      width: size.width * 0.14,
                                       decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Color(0xff64FFDA),
+                                        ),
                                         borderRadius:
                                             BorderRadius.circular(4.0),
-                                        color: Color(0xff0A192F),
                                       ),
-                                      child: MaterialButton(
-                                        onPressed: () {
-                                          method.launchEmail();
-                                        },
-                                        hoverColor: Colors.green,
-                                        child: Text(
-                                          "Get In Touch",
-                                          style: TextStyle(
-                                            color: Color(0xff64FFDA),
-                                            letterSpacing: 2.75,
-                                            wordSpacing: 1.0,
-                                            fontSize: 15.0,
-                                          ),
+                                      child: Text(
+                                        "Get In Touch",
+                                        style: TextStyle(
+                                          color: Color(0xff64FFDA),
+                                          letterSpacing: 2.75,
+                                          wordSpacing: 1.0,
+                                          fontSize: 15.0,
                                         ),
                                       ),
                                     ),
                                   ),
+
                                   SizedBox(
-                                    height: 150.0,
+                                    height: size.height * 0.20,
                                   ),
                                 ],
                               ),
 
-                              //About Me
+                              
 
+                              //About Me
                               _wrapScrollTag(
                                 index: 0,
                                 child: About(),
                               ),
                               SizedBox(
-                                height: 6.0,
+                                height: size.height * 0.02,
                               ),
 
                               //Where I've Worked
-
                               _wrapScrollTag(
                                 index: 1,
-                                child: Work(),
+                                child:Work()
                               ),
                               SizedBox(
-                                height: 6.0,
+                                height: size.height * 0.10,
                               ),
 
                               //Some Things I've Built Main Project
-
                               _wrapScrollTag(
                                   index: 2,
                                   child: Column(
@@ -515,7 +516,6 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: size.height * 0.86,
                                         width: size.width - 100,
-                                        //color: Colors.deepOrangeAccent,
                                         child: Column(
                                           children: [
                                             Row(
@@ -585,7 +585,6 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: size.height * 0.86,
                                         width: size.width - 100,
-                                        // color: Colors.indigo,
                                         child: Column(
                                           children: [
                                             Row(
@@ -655,7 +654,6 @@ class _HomePageState extends State<HomePage> {
                                       Container(
                                         height: size.height * 0.86,
                                         width: size.width - 100,
-                                        //color: Colors.deepOrangeAccent,
                                         child: Column(
                                           children: [
                                             Row(

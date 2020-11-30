@@ -28,15 +28,14 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width - 100,
+      height: size.height,
+      width:size.width - 100,
       child: Row(
         children: [
           //About me
           Container(
             height: size.height * 0.9,
             width: size.width / 2 - 100,
-            //color: Colors.purple,
             child: Column(
               children: [
                 //About me title
@@ -59,7 +58,7 @@ class About extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.01,
+                      width: size.width * 0.01,
                     ),
                     Container(
                       width: size.width / 4,
@@ -104,7 +103,7 @@ class About extends StatelessWidget {
                 Container(
                   height: size.height * 0.15,
                   width: size.width,
-                  child: Row(
+                  child: Wrap(  
                     children: [
                       Container(
                         width: size.width * 0.20,
@@ -126,6 +125,7 @@ class About extends StatelessWidget {
                             technology(context, "C/C++, Java."),
                             technology(context, "HTML & (S)CSS"),
                             technology(context, "MYSQL"),
+                            technology(context, "Git - Github"),
                           ],
                         ),
                       )
@@ -178,7 +178,9 @@ class CustomImageAnimation extends StatefulWidget {
 
 class _CustomImageAnimationState extends State<CustomImageAnimation> {
   Color customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+  // ignore: unused_field
   int _enterCounter = 0;
+  // ignore: unused_field
   int _exitCounter = 0;
   double x = 0.0;
   double y = 0.0;

@@ -1,133 +1,87 @@
 import 'package:flutter/material.dart';
-import 'package:steps/steps.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MobileWork extends StatelessWidget {
+class MobileWork extends StatefulWidget {
+  @override
+  _MobileWorkState createState() => _MobileWorkState();
+}
+
+class _MobileWorkState extends State<MobileWork> {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height,
-      width: size.width - 100,
-      alignment: Alignment.topCenter,
-      child: Steps(
-        direction: Axis.vertical,
-        size: 20.0,
-        path: {'color': Colors.lightBlue.shade200, 'width': 2.75},
-        steps: [
-          {
-            'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
-            'label': '*',
-            'content': Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Sandip Institute Of Engineering & Management Nashik",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Color(0xffCCD6F6),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 6.0,
-                ),
-                Text(
-                  "I am currently pursuing Bachelor's Degree in Computer Science and Engineering \nat Savitribai Phule Pune University",
-                  style: TextStyle(
-                    fontSize: 13.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Text(
-                  "2016 - Present ",
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
-          },
-          {
-            'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
-            'label': '*',
-            'content': Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Flutter + Dart Development Winter Bootcamp",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Color(0xffCCD6F6),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 6.0,
-                ),
-                Text(
-                  "The Complete 2020 Flutter + Dart Winter Development Bootcamp at LCO Training Center,\nJaipur, Rajasthan (302017), Covering all the fundamental concepts for Flutter development",
-                  style: TextStyle(
-                    fontSize: 13.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Text(
-                  "Dec - 2019 to Feb - 2020 ",
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
-          },
-          {
-            'color': Color(0xff64FFDA),
-            'background': Colors.indigo,
-            'label': '*',
-            'content': Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Freelancer - Flutter | Dart Mobile App Developer | UI - UX Designer",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Color(0xffCCD6F6),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 6.0,
-                ),
-                Text(
-                  "Flutter Developer and experienced programmer with an extensive history of designing and coding \nsolutions. Skilled in Google’s Flutter/Dart, Firebase App and Web development on a global scale. If you \nare looking for someone that you can trust that will complete your app on time and on budget, then \nplease contact me. I have been developing software for 1+ years and take pride in everything I do.",
-                  style: TextStyle(
-                    fontSize: 13.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Text(
-                  "Oct 2019 - Present ",
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Color(0xffCCD6F6).withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
-          },
+    final Size size = MediaQuery.of(context).size;
+    return ConstrainedBox(
+      constraints: BoxConstraints.tightFor(
+        width: size.width,
+        height: size.height * 1.7,
+      ),
+      child: Column(
+        children: [
+          SizedBox(
+            height: size.height * 0.07,
+          ),
+          Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                    height: size.height * 1.2,
+                    //color: Colors.indigo,
+                    child: Stack(
+                      children: [
+                        Center(
+                          child: VerticalDivider(
+                            color: Color(0xff64FFDA),
+                            thickness: 1.75,
+                            width: 10,
+                            indent: 10,
+                            endIndent: 10,
+                          ),
+                        ),
+                        Container(
+                          child: Center(
+                              child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.pink,
+                                child: FaIcon(FontAwesomeIcons.laptopHouse,
+                                    color: Colors.white),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: Colors.red,
+                                child: FaIcon(FontAwesomeIcons.freeCodeCamp,
+                                    color: Colors.white),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: Colors.brown,
+                                child: FaIcon(FontAwesomeIcons.laptopCode,
+                                    color: Colors.white),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: Colors.deepOrange,
+                                child: FaIcon(FontAwesomeIcons.coffee,
+                                    color: Colors.white),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: Colors.deepPurple,
+                                child: FaIcon(FontAwesomeIcons.dev,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          )),
+                        )
+                      ],
+                    )),
+              ),
+              Expanded(
+                  flex: 4,
+                  child: Container(
+                    height: size.height * 1.7,
+                    child: MobileWork(),
+                  ))
+            ],
+          )
         ],
       ),
     );
